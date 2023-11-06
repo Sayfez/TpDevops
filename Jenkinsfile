@@ -2,10 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonage du référentiel') {
+        stage('git') {
             steps {
                 // Cloner le référentiel depuis votre système de contrôle de version
-                 url:github.com/Sayfez/TpDevops         }
+                 url: https://github.com/Sayfez/TpDevops  
+                  }
         }
         /*stage('Construction') {
             steps {
