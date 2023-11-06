@@ -8,6 +8,23 @@ pipeline {
                   git branch: 'main', url : 'https://github.com/Sayfez/TpDevops.git'
                   }
         }
-
+        stage('Construction') {
+            steps {
+                // Exécuter votre processus de construction (par exemple, Maven, Gradle, etc.)
+                sh 'mvn clean install'
+            }
+        }
+        stage('Tests') {
+            steps {
+                // Exécuter vos tests unitaires ou tests d'intégration
+                sh 'mvn test'
+            }
+        }
+        stage('Déploiement') {
+            steps {
+                // Déployer votre application sur un serveur ou une plateforme spécifique
+                sh 'mvn deploy'
+            }
+        }
     }
 }
