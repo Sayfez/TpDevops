@@ -15,7 +15,7 @@ pipeline {
         stage('Construction') {
             steps {
                 // Exécuter votre processus de construction (par exemple, Maven, Gradle, etc.)
-                sh 'mvn clean install'
+                sh 'mvn clean package'
             }
         }
         stage('Tests') {
