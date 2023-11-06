@@ -5,7 +5,7 @@ pipeline {
         stage('Clonage du référentiel') {
             steps {
                 // Cloner le référentiel depuis votre système de contrôle de version
-                 https://github.com/Sayfez/TpDevops         }
+                 url://github.com/Sayfez/TpDevops         }
         }
         stage('Construction') {
             steps {
