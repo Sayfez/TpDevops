@@ -20,11 +20,11 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Déploiement') {
+     /*   stage('Déploiement') {
             steps {
                 // Déployer votre application sur un serveur ou une plateforme spécifique
                 sh 'mvn deploy'
             }
-        }
+        }*/
     }
 }
