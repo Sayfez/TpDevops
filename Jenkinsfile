@@ -25,6 +25,6 @@ pipeline {
                 // Déployer votre application sur un serveur ou une plateforme spécifique
                  'mvn deploy'
             }
-        }
-    }*/
+        }*/
+    }
 }
