@@ -7,7 +7,7 @@ pipeline {
                 // Cloner le référentiel depuis votre système de contrôle de version
                  url://github.com/Sayfez/TpDevops         }
         }
-        stage('Construction') {
+        /*stage('Construction') {
             steps {
                 // Exécuter votre processus de construction (par exemple, Maven, Gradle, etc.)
                  'mvn clean install'
@@ -24,6 +24,6 @@ pipeline {
                 // Déployer votre application sur un serveur ou une plateforme spécifique
                  'mvn deploy'
             }
-        }
+        }*/
     }
 }
