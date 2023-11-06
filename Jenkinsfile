@@ -2,6 +2,10 @@ pipeline {
     agent any
 
     stages {
+        stage('checkout'){
+            steps {
+                checkout scm }
+        }
         stage('git') {
             steps {
                 // Cloner le référentiel depuis votre système de contrôle de version
