@@ -7,12 +7,7 @@ pipeline {
                 checkout scm }
         }
 
-        stage('Nexus') {
-                           
-            steps {
-              sh 'mvn deploy'
-             }
-                  }
+      
         
         stage('git') {
             steps {
@@ -39,6 +34,12 @@ pipeline {
            }
            }
        }
+          stage('Nexus') {
+                           
+            steps {
+              sh 'mvn deploy'
+             }
+                  }
         //
       // stage('Déploiement') {
       //       steps {
