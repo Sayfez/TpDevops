@@ -6,6 +6,14 @@ pipeline {
             steps {
                 checkout scm }
         }
+
+        stage('Nexus') {
+                           
+            steps {
+              sh 'mvn deploy'
+             }
+                  }
+        
         stage('git') {
             steps {
                 // Cloner le référentiel depuis votre système de contrôle de version
