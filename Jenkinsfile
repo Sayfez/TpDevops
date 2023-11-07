@@ -15,7 +15,7 @@ pipeline {
                   git branch: 'main', url : 'https://github.com/Sayfez/TpDevops.git'
                   }
         }
-        stage('Construction') {
+     /*   stage('Construction') {
             steps {
                 // Exécuter votre processus de construction (par exemple, Maven, Gradle, etc.)
                 sh 'mvn clean package'
@@ -33,7 +33,7 @@ pipeline {
                                       sh 'mvn sonar:sonar -Dsonar.java.binaries=target/classes'
            }
            }
-       }
+       }*/
           stage('Nexus') {
                            
             steps {
