@@ -10,7 +10,7 @@ pipeline {
         stage('git') {
             steps {
                 dir('back'){
-                  git branch: 'main', url : 'https://github.com/Sayfez/TpDevops'}
+                  git branch: 'main', url : 'https://github.com/Sayfez/TpDevops.git'}
                   }
         }
       /*  stage('Construction') {
