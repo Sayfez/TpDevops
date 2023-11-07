@@ -38,7 +38,7 @@ pipeline {
                 emailext(
                     subject: "Pipeline Succeeded: ${currentBuild.fullDisplayName}",
                     body: "The pipeline has succeeded. You can view the results at ${BUILD_URL}",
-                    to: 'djsayf16@gmail@gmail.com',
+                    to: 'djsayf16@gmail.com',
                     attachLog: true,
                 )
             }
