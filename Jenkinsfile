@@ -4,26 +4,22 @@ pipeline {
         
         stage('checkout'){
             steps {
-                dir('back'){
-                checkout scm }}
+                checkout scm }
         }
         stage('git') {
             steps {
                   git branch: 'main', url : 'https://github.com/Sayfez/TpDevops.git'}
                   }
-        }
       /*  stage('Construction') {
             steps {
-                dir('back'){
                 // Exécuter votre processus de construction (par exemple, Maven, Gradle, etc.)
-                sh 'mvn clean package'}
+                sh 'mvn clean package'
             }
         }
         stage('Tests') {
             steps {
-                dir('back'){
                 // Exécuter vos tests unitaires ou tests d'intégration
-                sh 'mvn test'}
+                sh 'mvn test'
             }
              post {
         failure {
@@ -53,10 +49,8 @@ pipeline {
         
        stage('sonarqube') {
            steps {
-               dir('back'){
            withSonarQubeEnv('sonarserver') {
                                       sh 'mvn sonar:sonar -Dsonar.java.binaries=target/classes'}
-           }
            }
        }*/
         stage('Nexus') {
@@ -67,7 +61,6 @@ pipeline {
                
             }
                
-            }
         
        
         //
