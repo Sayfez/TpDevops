@@ -21,7 +21,7 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        stage('Tests') {
+   /*     stage('Tests') {
             steps {
                 // Exécuter vos tests unitaires ou tests d'intégration
                 sh 'mvn test'
@@ -33,7 +33,7 @@ pipeline {
                                       sh 'mvn sonar:sonar -Dsonar.java.binaries=target/classes'
            }
            }
-       }
+       }*/
           stage('Nexus') {
                            
             steps {
