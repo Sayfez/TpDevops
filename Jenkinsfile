@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        
+       
         stage('checkout'){
             steps {
                 checkout scm }
@@ -16,7 +16,6 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-          
         stage('Tests') {
             steps {
                 // Exécuter vos tests unitaires ou tests d'intégration
@@ -33,7 +32,7 @@ pipeline {
                 )
             }
         }
-        
+       
         success {
             script {
                 emailext(
@@ -47,15 +46,13 @@ pipeline {
     }
 }
 
-        
+       
        stage('sonarqube') {
            steps {
            withSonarQubeEnv('sonarserver') {
                                       sh 'mvn sonar:sonar -Dsonar.java.binaries=target/classes'}
            }
        }
-
-        
         stage('Nexus') {
                            
             steps {
@@ -63,19 +60,8 @@ pipeline {
             }
                
             }
-        //        stage("docker image"){
-        //     steps {
-        //           {
-        //         script{
-        //             sh 'docker build -t devops . '
-        //             sh'docker tag devops sayfez/devops'
-
-        //         }}
                
-        //     }
-           
-        // } 
-        
+       
        
         //
       // stage('Déploiement') {
