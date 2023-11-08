@@ -57,7 +57,7 @@ pipeline {
 
          stage("docker image"){
             steps {
-                  dir('back'){
+                  {
                 script{
                     sh 'docker build -t devops . '
                     sh'docker tag devops sayfez/devops'
