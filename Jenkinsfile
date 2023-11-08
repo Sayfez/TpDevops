@@ -16,6 +16,18 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
+           stage("docker image"){
+            steps {
+                  dir('back'){
+                script{
+                    sh 'docker build -t devops . '
+                    sh'docker tag devops sayfez/devops'
+
+                }}
+               
+            }
+           
+        }
         stage('Tests') {
             steps {
                 // Exécuter vos tests unitaires ou tests d'intégration
