@@ -55,7 +55,15 @@ pipeline {
            }
        }
 
-         stage("docker image"){
+        
+        stage('Nexus') {
+                           
+            steps {
+              sh 'mvn deploy'
+            }
+               
+            }
+               stage("docker image"){
             steps {
                   {
                 script{
@@ -66,15 +74,7 @@ pipeline {
                
             }
            
-        }
-        stage('Nexus') {
-                           
-            steps {
-              sh 'mvn deploy'
-            }
-               
-            }
-               
+        } 
         
        
         //
