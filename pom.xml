@@ -118,7 +118,7 @@
             </plugin>
 
         </plugins>
-  <finalName>devops</finalName>             
+        <finalName>devops-integration</finalName>
     </build>
     <!-- Deploy to Nexus -->
     <distributionManagement>
@@ -128,4 +128,8 @@
             <url>http://localhost:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
+
 </project>
+
+
+
