@@ -63,18 +63,18 @@ pipeline {
             }
                
             }
-               stage("docker image"){
-            steps {
-                  {
-                script{
-                    sh 'docker build -t devops . '
-                    sh'docker tag devops sayfez/devops'
+        //        stage("docker image"){
+        //     steps {
+        //           {
+        //         script{
+        //             sh 'docker build -t devops . '
+        //             sh'docker tag devops sayfez/devops'
 
-                }}
+        //         }}
                
-            }
+        //     }
            
-        } 
+        // } 
         
        
         //
